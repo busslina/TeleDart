@@ -25,7 +25,7 @@ part of '../model.dart';
 /// [file]: https://core.telegram.org/bots/api#document
 /// [sticker]: https://core.telegram.org/bots/api#sticker
 @JsonSerializable(fieldRename: FieldRename.snake)
-class PhotoSize {
+class PhotoSize extends Comparable<PhotoSize> {
   String fileId;
   String fileUniqueId;
   int width;
@@ -51,4 +51,12 @@ width: $width
 height: $height
 fileSize: $fileSize
 ''';
+
+  @override
+  int compareTo(PhotoSize other) {
+    final resolution = width * height;
+    final otherResolution = other.width * other.height;
+
+    return resolution.compareTo(otherResolution);
+  }
 }
