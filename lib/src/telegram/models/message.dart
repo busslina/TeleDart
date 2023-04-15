@@ -182,7 +182,7 @@ class Message {
       editDate = dateTime == null ? null : TimeHelper.toUnixTime(dateTime);
 
   factory Message.fromJson(Map<String, dynamic> json) {
-    print('Message.fromJson() -- $json');
+    // print('Message.fromJson() -- $json');
     return _$MessageFromJson(json);
   }
   Map<String, dynamic> toJson() => _$MessageToJson(this);
