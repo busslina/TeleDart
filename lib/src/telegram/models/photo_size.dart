@@ -25,7 +25,7 @@ part of '../model.dart';
 /// [file]: https://core.telegram.org/bots/api#document
 /// [sticker]: https://core.telegram.org/bots/api#sticker
 @JsonSerializable(fieldRename: FieldRename.snake)
-class PhotoSize extends Comparable<PhotoSize> {
+class PhotoSize implements Comparable<PhotoSize> {
   String fileId;
   String fileUniqueId;
   int width;
