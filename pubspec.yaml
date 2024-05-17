@@ -9,7 +9,8 @@ environment:
 
 dependencies:
   json_annotation: ^4.8.1
-  http: ^0.13.5
+  # http: ^0.13.5
+  http: ^1.2.1
 
 dev_dependencies:
   test: ^1.24.6
